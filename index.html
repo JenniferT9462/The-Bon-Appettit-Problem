@@ -23,18 +23,31 @@
         Also we are given the item that Anna doesn't eat and needs to be subtracted.
     </p>
     <h2>Solution</h2>
+        <p> First, we need to add up the bill.</p>
+        <p>Next, we need to see what Anna did not eat.</p>
+        <p>Then, we need to subtract that item from our sum of the bill.</p>
+        <p>Now, since there is two people we divide by two. This will give us the correct amount that Anna needs to pay.</p>
+        <p>So, we now know what Anna should be charged; we need to find out if Brian overcharged her or charged her correctly. </p>
+        <p>We can do this by subtracting the correct amount from the amount charged. If it is zero then Brian charged her correctly.</p>
+        <p>If there is a difference and it is positive Anna is owed that difference. </p>
+        <p>If there is a difference and it is negative then Anna owes money to Brian.</p>
     <h2>Picture/Diagram</h2>
     <p>
         <img src="bonAppetit.png">
     </p>
     <h2>Pseudocode</h2>
     <pre>
-        correctSplit = sum of array - the item Anna did not eat
-
+        LET bill = array of prices
+        LET k = the item in the bill that Anna did not eat
+        LET b = the money Brian charged Anna
+        LET sum = sum of bill
+        
+        FOR EACH item in the bill add them together
+        LET correctSplit = sum of array - the item Anna did not eat divided by 2
         IF the money Anna was charged - correctSplit === 0;
             THEN print  “Bon Appetit!!”
         ELSE  
-            return Money owed to Anna
+            return Money owed to Anna b - correctSplit
     </pre>
     <h2>Discussion</h2>
     <p>
