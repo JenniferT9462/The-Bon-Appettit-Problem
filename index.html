@@ -6,6 +6,166 @@
     <title>The Bon Appetit Problem</title>
 </head>
 <body>
+    <h1>
+        The Bon Appetit Problem Day-3
+    </h1>
+
+    <h2>Problem</h2>
+    <p>
+        <a href="https://www.hackerrank.com/challenges/bon-appetit/problem?isFullScreen=true" target="_blank">HackerRank Problem</a>
+    </p>
+    <p>
+        Two friends Anna and Brian, are deciding how to split the bill at a dinner. Each will only pay for the items they consume. Brian gets the check and calculates Anna's portion. You must determine if his calculation is correct.
+    </p>
+    <p>
+        We are given the amount of money that Brian charged Anna
+        And the bill which is an array of integers(prices)
+        Also we are given the item that Anna doesn't eat and needs to be subtracted.
+    </p>
+    <h2>Solution</h2>
+    <h2>Picture/Diagram</h2>
+    <p>
+        <img src="bonAppetit.png">
+    </p>
+    <h2>Pseudocode</h2>
+    <pre>
+        correctSplit = sum of array - the item Anna did not eat
+
+        IF the money Anna was charged - correctSplit === 0;
+            THEN print  “Bon Appetit!!”
+        ELSE  
+            return Money owed to Anna
+    </pre>
+    <h2>Discussion</h2>
+    <p>
+        Ok so we're adding up the total bill and dividing
+        it by 2 then comparing it to another bill that is 
+        added up minus the dessert and divided by 2.
+        Yes...The input is the number of item...Then the index of the item Anna doesn’t want..
+        Then the bill and the $$ Brian charged her..
+        We are trying to see if Brian overcharged her
+        So, the parameters that will be passed thru the function is
+        bill (array of prices)...b = [3 10 2 9]
+        k = the item Anna doesn't want bill[k]
+        b = What Brian charged Anna (12)
+    </p>
+    <h2>Examples</h2>
+    <table border="1">
+        <tr>
+        <th>Bill</th>
+        <th>k</th>
+        <th>b</th>
+        <th>Output</th>
+        </tr>
+        <tr>
+            <td>[5, 4, 8, 6]</td>
+            <td>bill[0]</td>
+            <td>9</td>
+            <td>
+                <script>
+                    let bill = [5,4,6,8];
+                    let k = bill[0];
+                    let b = 9;
+                    let sum = 0;
+                    
+                    for (let i = 0; i < bill.length; i++) { sum += bill[i]; }
+                    let correctSplit = (sum - k)/2;
+                    if (b - correctSplit === 0) {
+                         document.write("Bon Appetit!");
+                    }else {
+                         document.write(b - correctSplit);
+                    }
+                    
+                    
+                    
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>[3, 10, 2, 9]</td>
+            <td>bill[1]</td>
+            <td>7</td>
+            <td>
+                <script>
+                    bill = [3,10,2,9];
+                    k = bill[1];
+                    b = 12;
+                    sum = 0;
+                    
+                    for (let i = 0; i < bill.length; i++) { sum += bill[i]; }
+                    correctSplit = (sum - k)/2;
+                    if (b - correctSplit === 0) {
+                         document.write("Bon Appetit!");
+                    }else {
+                         document.write(b - correctSplit);
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>[5,4,8,6]</td>
+            <td>bill[3]</td>
+            <td>8.50</td>
+            <td>
+                <script>
+                    bill = [5,4,8,6];
+                    k = bill[3];
+                    b = 8.50;
+                    sum = 0;
+                    
+                    for (let i = 0; i < bill.length; i++) { sum += bill[i]; }
+                    correctSplit = (sum - k)/2;
+                    if (b - correctSplit === 0) {
+                         document.write("Bon Appetit!");
+                    }else {
+                         document.write(b - correctSplit);
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>[8,13,50,20]</td>
+            <td>bill[1]</td>
+            <td>100</td>
+            <td>
+                <script>
+                    bill = [8,13,50,20];
+                    k = bill[1];
+                    b = 100;
+                    sum = 0;
+                    
+                    for (let i = 0; i < bill.length; i++) { sum += bill[i]; }
+                    correctSplit = (sum - k)/2;
+                    if (b - correctSplit === 0) {
+                         document.write("Bon Appetit!");
+                    }else {
+                         document.write(b - correctSplit);
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>[10,20,30,20]</td>
+            <td>bill[3]</td>
+            <td>50</td>
+            <td>
+                <script>
+                    bill = [10,20,30,20];
+                    k = bill[3];
+                    b = 50;
+                    sum = 0;
+                    
+                    for (let i = 0; i < bill.length; i++) { sum += bill[i]; }
+                    correctSplit = (sum - k)/2;
+                    if (b - correctSplit === 0) {
+                         document.write("Bon Appetit!");
+                    }else {
+                         document.write(b - correctSplit);
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
     
 </body>
 </html>
