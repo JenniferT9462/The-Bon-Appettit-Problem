@@ -179,6 +179,33 @@
                 </script>
             </td>
         </tr>
+        <tr>
+            <td>[3,6,7,8]</td>
+            <td>bill[0]</td>
+            <td>50</td>
+            <td>
+                <script>
+                    function bonAppetit(bill, k, b) {
+                        // Write your code here
+                        sum = 0;
+                        for(let i=0;i< bill.length; i++) {
+                            sum += bill[i];
+                        }
+                        correctSplit = (sum - bill[k])/2;
+                        if (b - correctSplit === 0) {
+                            document.write('Bon Appetit');
+                        }else {
+                            document.write(b - correctSplit);
+                        }
+                            
+                        
+
+                    }
+                    bonAppetit([3,6,7,8],0,50);
+                    
+                </script>
+            </td>
+        </tr>
     </table>
     
 </body>
