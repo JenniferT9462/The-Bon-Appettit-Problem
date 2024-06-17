@@ -1,0 +1,23 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: blanchedalmond;
+}
+h1 {
+    text-align: center;
+    color: slateblue;
+    border: solid 2px;
+}
+h2 {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+.bonAppetit {
+    background-color: aquamarine;
+}
+th {
+    background-color: blanchedalmond;
+}
+tr {
+    background-color: lightblue;
+}
